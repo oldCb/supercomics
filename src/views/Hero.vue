@@ -1,5 +1,6 @@
 <template>
   <div class="hero">
+    <h1>PAGE HERO</h1>
   </div>
 </template>
 

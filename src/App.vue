@@ -3,6 +3,7 @@
     <component :is="nav">
       <router-view />
     </component>
+    <router-view />
     <component :is="footer">
       <router-view />
     </component>
