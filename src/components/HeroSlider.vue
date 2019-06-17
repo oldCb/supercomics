@@ -11,9 +11,9 @@ export default {
   data () {
     return {
       images: [
-        '/img/spiderman/spiderman1.jpg',
-        '/img/spiderman/spiderman2.jpg',
-        '/img/spiderman/spiderman3.jpg'
+        '/img/spiderman/1.jpg',
+        '/img/spiderman/2.jpg',
+        '/img/spiderman/3.jpg'
       ],
       currentImage: 0,
       timer: null
