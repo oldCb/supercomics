@@ -1,11 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/hero-">Hero</router-link>
-    </div>
-    <router-view/>
+    <component :is="nav">
+      <router-view />
+    </component>
+    <router-view />
+    <component :is="footer">
+      <router-view />
+    </component>
   </div>
 </template>
+
+<script>
+const NAV_SECTION = 'navigation'
+const FOOTER_SECTION = 'theFooter'
+
+export default {
+  computed: {
+    nav () {
+      return (this.$route.meta.section || NAV_SECTION) + '-section'
+    },
+    footer () {
+      return (this.$route.meta.section || FOOTER_SECTION) + '-section'
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

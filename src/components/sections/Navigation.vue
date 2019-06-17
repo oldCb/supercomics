@@ -1,16 +1,15 @@
 <template>
-  <div class="hero">
-    <h1>PAGE HERO</h1>
+  <div class="nav">
+    <p>navigation a mettre en forme</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Hero'
+  name: 'Navigation'
 }
 </script>
 
 <style lang="scss" scoped>
 
 </style>
-

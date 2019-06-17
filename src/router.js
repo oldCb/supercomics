@@ -12,11 +12,19 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      meta: [
+        { nav: 'Navigation' },
+        { footer: 'Footer' }
+      ],
       component: Home
     },
     {
       path: '/hero-:heroName',
       name: 'hero',
+      meta: [
+        { nav: 'Navigation' },
+        { footer: 'Footer' }
+      ],
       component: Hero
     }
   ]
