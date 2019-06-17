@@ -3,7 +3,7 @@
     <component :is="nav">
       <router-view />
     </component>
-    <router-view class="app_page" />
+    <router-view id="app_container" class="app_page" />
     <component :is="footer">
       <router-view />
     </component>
@@ -28,9 +28,17 @@ export default {
 
 <style lang="scss">
   #app {
-
+    & a, & a:visited, & a:hover {
+      text-decoration: none;
+      color: #000;
+    }
+    &_container {
+      width: 80%;
+      margin: 0 auto;
+    }
     &_page {
       margin-bottom: 50px;
+      text-align: justify;
     }
   }
 </style>
