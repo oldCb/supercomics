@@ -1,12 +1,37 @@
 <template>
   <div class="slider">
-    <img src="../assets/img/spiderman/spiderman1.jpg" alt="spiderman">
+    <img :src="images[currentImage % images.length]" alt="spiderman">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HeroSlider'
+  name: 'HeroSlider',
+
+  data () {
+    return {
+      images: [
+        '/img/spiderman/spiderman1.jpg',
+        '/img/spiderman/spiderman2.jpg',
+        '/img/spiderman/spiderman3.jpg'
+      ],
+      currentImage: 0,
+      timer: null
+    }
+  },
+
+  methods: {
+    startSlider () {
+      this.timer = setInterval(this.next, 3000)
+    },
+    next () {
+      this.currentImage++
+    }
+  },
+
+  mounted () {
+    this.startSlider()
+  }
 
 }
 </script>
