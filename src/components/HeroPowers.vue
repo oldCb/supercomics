@@ -1,9 +1,11 @@
 <template>
   <div class="hero_powers">
     <h2>Détails super pouvoirs</h2>
-    <ul>
-      <li>{{ powersInfos }}</li>
-      <li>{{ powersInfos }}</li>
+    <ul v-for="(power, index) in powers" :key="index">
+      <li>
+        <h3>{{ power.name }}</h3>
+        <p>{{ power.infos }}</p>
+      </li>
     </ul>
   </div>
 </template>
@@ -13,7 +15,16 @@ export default {
   name: 'HeroPowers',
   data () {
     return {
-      powersInfos: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe a reiciendis, totam, facilis atque, molestiae officiis provident perferendis placeat enim quae necessitatibus dignissimos explicabo aspernatur vitae eum possimus voluptate aliquam.'
+      powers: [
+        {
+          name: 'lorem',
+          infos: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe a reiciendis, totam, facilis atque, molestiae officiis provident perferendis placeat enim quae necessitatibus dignissimos explicabo aspernatur vitae eum possimus voluptate aliquam.'
+        },
+        {
+          name: 'lorem',
+          infos: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe a reiciendis, totam, facilis atque, molestiae officiis provident perferendis placeat enim quae necessitatibus dignissimos explicabo aspernatur vitae eum possimus voluptate aliquam.'
+        }
+      ]
     }
   }
 }
@@ -25,10 +36,6 @@ export default {
 
     & ul {
       padding-left: 20px;
-
-      & li {
-        padding-bottom: 15px;
-      }
     }
   }
 </style>
