@@ -1,11 +1,11 @@
 <template>
   <div class="nav">
-    <div class="nav_site">
-      <div class="nav_site_img">
+    <div class="nav_logo">
+      <a href="/">
         <img src="../../assets/img/logo.jpg" alt="logo">
-      </div>
-      <h1>SuperComics</h1>
+      </a>
     </div>
+    <h1>SuperComics</h1>
     <search-input />
   </div>
 </template>
@@ -30,19 +30,8 @@ export default {
     justify-content: space-around;
     align-items: center;
 
-    &_site {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 50%;
-
-      &_img {
-        width: 100px;
-
-        & img {
-          width: 100%
-        }
-      }
+    &_logo img {
+      width: 100px;
     }
   }
 </style>
