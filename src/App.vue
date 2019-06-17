@@ -28,7 +28,10 @@ export default {
 
 <style lang="scss">
   #app {
-
+    & a, & a:visited, & a:hover {
+      text-decoration: none;
+      color: #000;
+    }
     &_container {
       width: 80%;
       margin: 0 auto;
