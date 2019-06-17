@@ -1,6 +1,6 @@
 <template>
   <div class="slider">
-    <img :src="images[currentImage % images.length]" alt="spiderman">
+    <img :src="images[currentImage % images.length]" :alt="herosName">
   </div>
 </template>
 
@@ -8,13 +8,13 @@
 export default {
   name: 'HeroSlider',
 
+  props: {
+    currentName: String
+  },
+
   data () {
     return {
-      images: [
-        '/img/spiderman/1.jpg',
-        '/img/spiderman/2.jpg',
-        '/img/spiderman/3.jpg'
-      ],
+      herosName: this.currentName,
       currentImage: 0,
       timer: null
     }
@@ -22,7 +22,7 @@ export default {
 
   methods: {
     startSlider () {
-      this.timer = setInterval(this.next, 3000)
+      this.timer = setInterval(this.next, 2000)
     },
     next () {
       this.currentImage++
@@ -31,6 +31,16 @@ export default {
 
   mounted () {
     this.startSlider()
+  },
+
+  computed: {
+    images () {
+      return [
+        '/img/' + this.herosName + '/1.jpg',
+        '/img/' + this.herosName + '/2.jpg',
+        '/img/' + this.herosName + '/3.jpg'
+      ]
+    }
   }
 
 }

@@ -2,7 +2,7 @@
   <div class="hero">
     <h1 class="hero_name">{{ heroName }}</h1>
     <div class="hero_infos">
-      <hero-slider />
+      <hero-slider :currentName="heroName" />
       <div class="hero_infos_list">
         <p>Alias : <span>{{ heroAlias }}</span></p>
         <p>Pouvoirs : <span>{{ heroPowers }}</span></p>
@@ -43,7 +43,7 @@ export default {
 
   data () {
     return {
-      heroName: 'NOM HERO',
+      heroName: this.$route.params.herosName,
       heroAlias: 'toto',
       heroPowers: 'toto, toto, toto, toto',
       heroAffiliation: 'Lorem, ipsum dolor sit amet consectetur',
