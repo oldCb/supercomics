@@ -5,7 +5,7 @@
         <img src="../../assets/img/logo.jpg" alt="logo">
       </a>
     </div>
-    <h1>SuperComics</h1>
+    <a href="/"><h1>SuperComics</h1></a>
     <search-input />
   </div>
 </template>
