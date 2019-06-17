@@ -3,7 +3,7 @@
     <component :is="nav">
       <router-view />
     </component>
-    <router-view />
+    <router-view class="app_page" />
     <component :is="footer">
       <router-view />
     </component>
@@ -27,5 +27,10 @@ export default {
 </script>
 
 <style lang="scss">
+  #app {
 
+    &_page {
+      margin-bottom: 50px;
+    }
+  }
 </style>
