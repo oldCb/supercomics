@@ -3,13 +3,7 @@
     <h1 class="hero_name">{{ herosName | formatHerosName }}</h1>
     <div class="hero_infos">
       <hero-slider :currentName="herosName" />
-      <div class="hero_infos_list">
-        <p>Alias : <span>{{ heroAlias }}</span></p>
-        <p>Pouvoirs : <span>{{ heroPowers }}</span></p>
-        <p>Affiliation : <span>{{ heroAffiliation }}</span></p>
-        <p>Editeurs : <span>{{ heroEditors }}</span></p>
-        <p>Créer par : <span>{{ heroCreator }}</span></p>
-      </div>
+      <hero-snipet :currentName="herosName" />
     </div>
     <hero-stories :currentName="herosName" />
     <hero-powers :currentName="herosName" />
@@ -23,6 +17,7 @@
 
 <script>
 import HeroSlider from '@/components/HeroSlider'
+import HeroSnipet from '@/components/HeroSnipet'
 import HeroStories from '@/components/HeroStories'
 import HeroPowers from '@/components/HeroPowers'
 import HeroFilms from '@/components/HeroFilms'
@@ -34,6 +29,7 @@ export default {
 
   components: {
     HeroSlider,
+    HeroSnipet,
     HeroStories,
     HeroPowers,
     HeroFilms,
