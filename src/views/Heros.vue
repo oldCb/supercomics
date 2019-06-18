@@ -11,8 +11,8 @@
         <p>Créer par : <span>{{ heroCreator }}</span></p>
       </div>
     </div>
-    <hero-stories />
-    <hero-powers />
+    <hero-stories :currentName="herosName" />
+    <hero-powers :currentName="herosName" />
     <div class="hero_films_list">
       <hero-films :currentName="herosName" />
       <hero-animation-films :currentName="herosName" />
