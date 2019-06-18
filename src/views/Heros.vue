@@ -74,7 +74,7 @@ export default {
       align-items: center;
 
       &_list {
-        width: 100%;
+        padding-left: 15px;
       }
     }
 

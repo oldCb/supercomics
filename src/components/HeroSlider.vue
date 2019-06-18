@@ -51,7 +51,9 @@ export default {
     text-align: center;
 
     & img {
-      width: 60%;
+      width: 340px;
+      height: 200px;
+      object-fit: cover;
     }
   }
 </style>
