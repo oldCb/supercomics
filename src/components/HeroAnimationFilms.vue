@@ -1,7 +1,7 @@
 <template>
   <div class="hero_animation_films">
     <h2>Films d'animation</h2>
-    <ul v-for="(animation, index) in animations" :key="index">
+    <ul v-for="(animation, index) in getHeroAnimation" :key="index">
       <li>{{ animations[index] }}</li>
     </ul>
   </div>
@@ -10,9 +10,29 @@
 <script>
 export default {
   name: 'HeroAnimationFilms',
+
+  props: {
+    currentName: String
+  },
+
   data () {
     return {
-      animations: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      heroName: this.currentName,
+      animations: []
+    }
+  },
+
+  computed: {
+    getHeroAnimation () {
+      switch (this.heroName) {
+        case 'spiderman':
+          this.animations.push('animation spiderman', 'animation spiderman', 'animation spiderman', 'animation spiderman', 'animation spiderman')
+          break
+        case 'black_panther':
+          this.animations.push('animation black panther', 'animation black panther', 'animation black panther', 'animation black panther', 'animation black panther')
+          break
+      }
+      return this.animations
     }
   }
 }

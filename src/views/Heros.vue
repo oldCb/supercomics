@@ -1,8 +1,8 @@
 <template>
   <div class="hero">
-    <h1 class="hero_name">{{ heroName }}</h1>
+    <h1 class="hero_name">{{ herosName | formatHerosName }}</h1>
     <div class="hero_infos">
-      <hero-slider />
+      <hero-slider :currentName="herosName" />
       <div class="hero_infos_list">
         <p>Alias : <span>{{ heroAlias }}</span></p>
         <p>Pouvoirs : <span>{{ heroPowers }}</span></p>
@@ -11,12 +11,12 @@
         <p>Créer par : <span>{{ heroCreator }}</span></p>
       </div>
     </div>
-    <hero-stories />
-    <hero-powers />
+    <hero-stories :currentName="herosName" />
+    <hero-powers :currentName="herosName" />
     <div class="hero_films_list">
-      <hero-films />
-      <hero-animation-films />
-      <hero-animation-series />
+      <hero-films :currentName="herosName" />
+      <hero-animation-films :currentName="herosName" />
+      <hero-animation-series :currentName="herosName" />
     </div>
   </div>
 </template>
@@ -43,12 +43,18 @@ export default {
 
   data () {
     return {
-      heroName: 'NOM HERO',
+      herosName: this.$route.params.herosName,
       heroAlias: 'toto',
       heroPowers: 'toto, toto, toto, toto',
       heroAffiliation: 'Lorem, ipsum dolor sit amet consectetur',
       heroEditors: 'lorem, lorem, lorem',
       heroCreator: 'toto'
+    }
+  },
+
+  filters: {
+    formatHerosName (value) {
+      return value.replace(/_/g, ' ').toUpperCase()
     }
   }
 }
@@ -68,7 +74,7 @@ export default {
       align-items: center;
 
       &_list {
-        width: 100%;
+        padding-left: 15px;
       }
     }
 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
-import Hero from './views/Hero'
+import Heros from './views/Heros'
 
 Vue.use(Router)
 
@@ -19,13 +19,13 @@ export default new Router({
       component: Home
     },
     {
-      path: '/hero-:heroName',
-      name: 'hero',
+      path: '/heros-:herosName',
+      name: 'heros',
       meta: [
         { nav: 'Navigation' },
         { footer: 'Footer' }
       ],
-      component: Hero
+      component: Heros
     }
   ]
 })

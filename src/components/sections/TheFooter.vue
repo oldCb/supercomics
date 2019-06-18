@@ -4,7 +4,7 @@
       <p>mettre icon et liens vers réseaux sociaux</p>
     </div>
     <div class="footer_contact">
-      <p>supercomics@gmail.com / etc</p>
+      <p>supercomics@gmail.com</p>
     </div>
     <div class="footer_copyright">
       <p>Copyright</p>
