@@ -38,21 +38,19 @@ export default {
       margin-bottom: 50px;
       width: 900px;
       height: 900px;
-      border: solid;
       display: flex;
       flex-wrap: wrap;
       align-content: flex-start
     }
 
     .superH {
-      border: 1px solid;
       width: 298px;
-      height: 300px;
+      height: 210px;
     }
 
     .superH img {
       width: 298px;
-      height: 300px;
+      height: 210px;
       filter: grayscale(1);
       -webkit-filter: grayscale(1);
       animation: scaledown .4s linear;
