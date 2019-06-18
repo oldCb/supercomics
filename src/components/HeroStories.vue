@@ -1,6 +1,6 @@
 <template>
   <div class="hero_stories">
-    <div v-for="(story, index) in getHeroStories" :key="index">
+    <div v-for="(story, index) in stories" :key="index">
       <div class="hero_stories-style">
         <h2>{{ story.name }}</h2>
         <p>{{ story.description }}</p>
@@ -24,7 +24,11 @@ export default {
     }
   },
 
-  computed: {
+  created () {
+    this.getHeroStories()
+  },
+
+  methods: {
     getHeroStories () {
       switch (this.heroName) {
         case 'spiderman':
@@ -52,7 +56,6 @@ export default {
           )
           break
       }
-      return this.stories
     }
   }
 }

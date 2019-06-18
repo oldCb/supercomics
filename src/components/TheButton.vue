@@ -2,41 +2,33 @@
     <div class="catSuperHeros">
         <div class="cat">
             <ul>
-                <li>categorie</li>
-                <li>categorie</li>
-                <li>categorie</li>
+                <li>Marvel</li>
+                <li>DC Comics</li>
+                <li>Mangas</li>
             </ul>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-    name: 'TheButton'
+export default {
+  name: 'TheButton'
 
-    }
-
+}
 </script>
 
-<style>
+<style scoped>
     .catSuperHeros {
-        width: 33%;
-        margin: auto
-
-
+      text-align: center;
     }
-    .cat {
-        margin-left: auto;
-        margin-right: auto;
+    ul {
+      padding-left: 0;
     }
-
-    ul li {
-        display:inline;
-        background-color: red;
-        padding: 20px;
-        margin: 10px;
-        border-radius: 30px
-    
+    li {
+      display:inline;
+      background-color: #888787;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 30px
     }
-
 </style>

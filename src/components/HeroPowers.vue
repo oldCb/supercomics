@@ -1,7 +1,7 @@
 <template>
   <div class="hero_powers">
     <h2>Détails super pouvoirs</h2>
-    <ul v-for="(power, index) in getHeroPowers" :key="index">
+    <ul v-for="(power, index) in powers" :key="index">
       <li>
         <h3>{{ power.name }}</h3>
         <p>{{ power.description }}</p>
@@ -25,7 +25,11 @@ export default {
     }
   },
 
-  computed: {
+  created () {
+    this.getHeroPowers()
+  },
+
+  methods: {
     getHeroPowers () {
       switch (this.heroName) {
         case 'spiderman':
@@ -53,7 +57,6 @@ export default {
           )
           break
       }
-      return this.powers
     }
   }
 }
