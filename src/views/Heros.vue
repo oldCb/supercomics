@@ -14,7 +14,7 @@
     <hero-stories />
     <hero-powers />
     <div class="hero_films_list">
-      <hero-films />
+      <hero-films :currentName="herosName" />
       <hero-animation-films />
       <hero-animation-series />
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="hero_films">
     <h2>Films</h2>
-    <ul v-for="(film, index) in films" :key="index">
+    <ul v-for="(film, index) in getHeroFilms" :key="index">
       <li>{{ films[index] }}</li>
     </ul>
   </div>
@@ -10,9 +10,29 @@
 <script>
 export default {
   name: 'HeroFilms',
+
+  props: {
+    currentName: String
+  },
+
   data () {
     return {
-      films: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      heroName: this.currentName,
+      films: []
+    }
+  },
+
+  computed: {
+    getHeroFilms () {
+      switch (this.heroName) {
+        case 'spiderman':
+          this.films.push('films spiderman', 'films spiderman', 'films spiderman', 'films spiderman', 'films spiderman')
+          break
+        case 'black_panther':
+          this.films.push('films black panther', 'films black panther', 'films black panther', 'films black panther', 'films black panther')
+          break
+      }
+      return this.films
     }
   }
 }
