@@ -35,17 +35,17 @@ export default {
     getSnipet () {
       switch (this.heroName) {
         case 'spiderman':
-          this.heroAlias = 'Peter Parker',
-          this.heroPowers = 'toto, toto, toto, toto',
-          this.heroAffiliation = 'Lorem, ipsum dolor sit amet consectetur',
-          this.heroEditors = 'Marvel',
+          this.heroAlias = 'Peter Parker'
+          this.heroPowers = 'toto, toto, toto, toto'
+          this.heroAffiliation = 'Lorem, ipsum dolor sit amet consectetur'
+          this.heroEditors = 'Marvel'
           this.heroCreator = 'toto'
           break
         case 'black_panther':
-          this.heroAlias = 'T\'Challa',
-          this.heroPowers = 'toto, toto, toto, toto',
-          this.heroAffiliation = 'Lorem, ipsum dolor sit amet consectetur',
-          this.heroEditors = 'Marvel',
+          this.heroAlias = 'T\'Challa'
+          this.heroPowers = 'toto, toto, toto, toto'
+          this.heroAffiliation = 'Lorem, ipsum dolor sit amet consectetur'
+          this.heroEditors = 'Marvel'
           this.heroCreator = 'toto'
           break
       }
