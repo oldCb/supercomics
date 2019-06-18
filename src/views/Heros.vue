@@ -54,7 +54,7 @@ export default {
 
   filters: {
     formatHerosName (value) {
-      return value.replace('_', ' ').toUpperCase()
+      return value.replace(/_/g, ' ').toUpperCase()
     }
   }
 }
