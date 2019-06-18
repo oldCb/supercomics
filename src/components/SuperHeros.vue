@@ -2,8 +2,8 @@
   <div class="listeHeros">
       <div class="superH" v-for="superhero in superheros" :key="superhero.id">
           <div class="image">
-            <a :href="'/heros-' + superheros.name">
-              <img :src="superhero.img" width="298" height="300">
+            <a :href="'/heros-' + superhero.path">
+              <img :src="superhero.img">
             </a>
           </div>
           <div class="description">
@@ -20,10 +20,10 @@ export default {
   data () {
     return {
       superheros: [
-        { name: 'black_panther', img: '/img/blackpanther.jpg', title: 'Black Panther', description: 'Black Panther est un super-héros évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' },
-        { name: 'captain_america', img: '/img/captainamerica.jpg', title: 'Captain America', description: 'Captain America est un super-héros de bande dessinée évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' },
-        { name: 'batman', img: '/img/batman.jpg', title: 'Batman', description: 'Bruce Wayne, alias Batman, est un héros de fiction appartenant à l\'univers de DC Comics.' },
-        { name: 'spiderman', img: '/img/spiderman.jpg', title: 'Spiderman', description: 'Spiderman est un super-héros évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' }
+        { path: 'black_panther', prod: 'marvel', img: '/img/blackpanther.jpg', title: 'Black Panther', description: 'Black Panther est un super-héros évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' },
+        { path: 'captain_america', prod: 'marvel', img: '/img/captainamerica.jpg', title: 'Captain America', description: 'Captain America est un super-héros de bande dessinée évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' },
+        { path: 'batman', prod: 'dc_comics', img: '/img/batman.jpg', title: 'Batman', description: 'Bruce Wayne, alias Batman, est un héros de fiction appartenant à l\'univers de DC Comics.' },
+        { path: 'spiderman', prod: 'marvel', img: '/img/spiderman.jpg', title: 'Spiderman', description: 'Spiderman est un super-héros évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' }
       ]
     }
   }
@@ -38,19 +38,19 @@ export default {
       margin-bottom: 50px;
       width: 900px;
       height: 900px;
-      border: solid;
       display: flex;
       flex-wrap: wrap;
       align-content: flex-start
     }
 
     .superH {
-      border: 1px solid;
       width: 298px;
-      height: 300px;
+      height: 210px;
     }
 
     .superH img {
+      width: 298px;
+      height: 210px;
       filter: grayscale(1);
       -webkit-filter: grayscale(1);
       animation: scaledown .4s linear;

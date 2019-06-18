@@ -1,12 +1,10 @@
 <template>
     <div class="catSuperHeros">
-        <div class="cat">
-            <ul>
-                <li>Marvel</li>
-                <li>DC Comics</li>
-                <li>Mangas</li>
-            </ul>
-        </div>
+      <ul>
+        <li>Marvel</li>
+        <li>DC Comics</li>
+        <li>Mangas</li>
+      </ul>
     </div>
 </template>
 
@@ -20,6 +18,7 @@ export default {
 <style scoped>
     .catSuperHeros {
       text-align: center;
+      margin: 50px;
     }
     ul {
       padding-left: 0;

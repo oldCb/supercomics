@@ -1,9 +1,7 @@
 <template>
   <div class="header">
-    <div class="title">
-      <h1>Find Your Super Heros</h1>
-    </div>
-    <the-button/>
+    <h1>Find Your Super Heros</h1>
+    <the-button />
   </div>
 </template>
 
@@ -19,8 +17,8 @@ export default {
 </script>
 
 <style>
-  .title h1 {
+  .header {
     text-align: center;
-    margin: 50px 0;
+    margin: 90px 0 110px;
   }
 </style>

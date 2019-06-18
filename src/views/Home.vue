@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <a href="/heros-spiderman" class="test">Spiderman</a>
-    <a href="/heros-black_panther" class="test">Black Panther</a>
     <home-header/>
     <super-heros/>
   </div>
