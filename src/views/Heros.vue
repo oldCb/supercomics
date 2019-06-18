@@ -15,8 +15,8 @@
     <hero-powers />
     <div class="hero_films_list">
       <hero-films :currentName="herosName" />
-      <hero-animation-films />
-      <hero-animation-series />
+      <hero-animation-films :currentName="herosName" />
+      <hero-animation-series :currentName="herosName" />
     </div>
   </div>
 </template>

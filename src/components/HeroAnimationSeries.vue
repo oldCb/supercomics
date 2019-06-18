@@ -1,7 +1,7 @@
 <template>
   <div class="hero_animation_series">
     <h2>Films d'animation</h2>
-    <ul v-for="(serie, index) in series" :key="index">
+    <ul v-for="(serie, index) in getHeroSeries" :key="index">
       <li>{{ series[index] }}</li>
     </ul>
   </div>
@@ -10,9 +10,29 @@
 <script>
 export default {
   name: 'HeroAnimationSeries',
+
+  props: {
+    currentName: String
+  },
+
   data () {
     return {
-      series: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      heroName: this.currentName,
+      series: []
+    }
+  },
+
+  computed: {
+    getHeroSeries () {
+      switch (this.heroName) {
+        case 'spiderman':
+          this.series.push('series spiderman', 'series spiderman', 'series spiderman', 'series spiderman', 'series spiderman')
+          break
+        case 'black_panther':
+          this.series.push('series black panther', 'series black panther', 'series black panther', 'series black panther', 'series black panther')
+          break
+      }
+      return this.series
     }
   }
 }
