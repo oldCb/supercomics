@@ -20,10 +20,10 @@ export default {
   data () {
     return {
       superheros: [
-        { path: 'black_panther', img: '/img/blackpanther.jpg', title: 'Black Panther', description: 'Black Panther est un super-héros évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' },
-        { path: 'captain_america', img: '/img/captainamerica.jpg', title: 'Captain America', description: 'Captain America est un super-héros de bande dessinée évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' },
-        { path: 'batman', img: '/img/batman.jpg', title: 'Batman', description: 'Bruce Wayne, alias Batman, est un héros de fiction appartenant à l\'univers de DC Comics.' },
-        { path: 'spiderman', img: '/img/spiderman.jpg', title: 'Spiderman', description: 'Spiderman est un super-héros évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' }
+        { path: 'black_panther', prod: 'marvel', img: '/img/blackpanther.jpg', title: 'Black Panther', description: 'Black Panther est un super-héros évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' },
+        { path: 'captain_america', prod: 'marvel', img: '/img/captainamerica.jpg', title: 'Captain America', description: 'Captain America est un super-héros de bande dessinée évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' },
+        { path: 'batman', prod: 'dc_comics', img: '/img/batman.jpg', title: 'Batman', description: 'Bruce Wayne, alias Batman, est un héros de fiction appartenant à l\'univers de DC Comics.' },
+        { path: 'spiderman', prod: 'marvel', img: '/img/spiderman.jpg', title: 'Spiderman', description: 'Spiderman est un super-héros évoluant dans l\'univers Marvel de la maison d\'édition Marvel Comics.' }
       ]
     }
   }
